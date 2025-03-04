@@ -1,0 +1,6 @@
+/node_modules
+/localtestonly
+*.env
+/driver
+/services/text2cypher
+/services/neo4j
