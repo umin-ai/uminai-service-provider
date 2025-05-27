@@ -12,7 +12,7 @@ interface AuthenticatedRequest extends Request {
   privyUser?: PrivyAuthPayload;
 }
 ManufacturerRouter.get("/", (req, res) => {
-  res.send("Nothing to see");
+  res.send("Hello World");
 });
 
 ManufacturerRouter.post("/registerOrGet", authenticatePrivy, async (req, res) => {
