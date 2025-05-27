@@ -5,7 +5,13 @@ import DIDIndexerModel from "../database/schema/did-indexer.schema";
 const router = Router();
 
 router.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.status(200).json({ message: "Web3 router is operational" });
+});
+
+// Error handling middleware
+router.use((err: Error, req: e.Request, res: e.Response, next: e.NextFunction) => {
+  console.error(err.stack);
+  res.status(500).json({ error: "Internal Server Error" });
 });
 
 router.get("/generate-udid", async (req, res) => {
